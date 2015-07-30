@@ -1,0 +1,32 @@
+%html
+  %h2 Кредитний онлайн-калькулятор
+  %h3 Кредитні відомості:
+  %form{action:'/result', method:'post' }
+    %table{cellpadding:5}
+      %tr
+        %td
+          %label{for:'procents'} Процентна ставка (%):
+        %td
+          %input#procents{type:'text', size:3}
+      %tr
+        %td
+          %label{for:'sum'} Сума кредиту:
+        %td
+          %input#sum{type:'text', size:10}
+      %tr
+        %td Метод погашення кредиту:
+        %td
+          %input#standartType{type:'radio', checked:true}
+          %label{for:'standartType'} Стандартний
+          %br
+          %input#annuity{type:'radio'}
+          %label{for:'standartType'} Ануїтетний (рівними частинами)
+      %tr
+        %td
+          %label{for:'time'} Термін кредиту (в місяцях):
+        %td
+          %input#time{type:'text', size:5}
+      %tr
+        %td
+        %td
+          %input{type:'submit', value:'Розрахувати'}

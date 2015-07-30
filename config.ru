@@ -1,0 +1,2 @@
+require './start'
+run Start
