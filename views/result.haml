@@ -1,13 +1,29 @@
+!!!!
 %html
-  %h2 Результати розрахунку по кредиту
-  .inputInfo
-    Процентна ставка:
-    %br
-    Сума кредиту:
-  %table{border:'3', cellpadding:'0', bordercolor:'black', :style => "border-collapse: collapse;"}
-    %tr
-      %td номер місяця
-      %td погашення кредиту
-      %td погашення %
-      %td загальний внесок
-      %td залишок кредиту
+  %head
+    %title Результати розрахунку
+  %body
+    %h2 Результати розрахунку по кредиту
+    .inputInfo
+      Процентна ставка: #{@params[:credit_percent]}%
+      %br
+      Сума кредиту: #{@params[:credit_sum]}
+    %table{border:'3', cellpadding:'0', bordercolor:'black', :style => "border-collapse: collapse;"}
+      %tr
+        %th номер місяця
+        %th погашення кредиту
+        %th погашення %
+        %th загальний внесок
+        %th залишок кредиту
+        -(@params[:credit_result].length-1).times do|x|
+          %tr
+            %td
+              =x+1
+            -@params[:credit_result][x].each do |key, value|
+              %td
+                ="%0.2f" % value
+        %td
+        -@params[:credit_result].last.each do |key, value|
+          %td
+            ="%0.2f" % value
+        %td

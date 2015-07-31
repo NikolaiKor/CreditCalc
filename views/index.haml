@@ -1,32 +1,38 @@
+!!!!
 %html
-  %h2 Кредитний онлайн-калькулятор
-  %h3 Кредитні відомості:
-  %form{action:'/result', method:'post' }
-    %table{cellpadding:5}
-      %tr
-        %td
-          %label{for:'procents'} Процентна ставка (%):
-        %td
-          %input#procents{type:'text', size:3}
-      %tr
-        %td
-          %label{for:'sum'} Сума кредиту:
-        %td
-          %input#sum{type:'text', size:10}
-      %tr
-        %td Метод погашення кредиту:
-        %td
-          %input#standartType{type:'radio', checked:true}
-          %label{for:'standartType'} Стандартний
-          %br
-          %input#annuity{type:'radio'}
-          %label{for:'standartType'} Ануїтетний (рівними частинами)
-      %tr
-        %td
-          %label{for:'time'} Термін кредиту (в місяцях):
-        %td
-          %input#time{type:'text', size:5}
-      %tr
-        %td
-        %td
-          %input{type:'submit', value:'Розрахувати'}
+  %head
+    %title Кредитний онлайн-калькулятор
+  %body
+    %h2 Кредитний онлайн-калькулятор
+    %h3 Кредитні відомості:
+    %form{action:'/result', method:'post' }
+      %table{cellpadding:5}
+        %tr
+          %td
+            %label{for:'procents'} Процентна ставка (%):
+          %td
+            %input#percent{type:'text', size:3, name:'credit_percent'}
+            %br
+            Увага: Дані вводяться через крапку!
+        %tr
+          %td
+            %label{for:'sum'} Сума кредиту:
+          %td
+            %input#sum{type:'text', name:'credit_sum', size:10}
+        %tr
+          %td Метод погашення кредиту:
+          %td
+            %input#standartType{type:'radio', name:'credit_type', value:'standart', checked:true}
+            %label{for:'standartType'} Стандартний
+            %br
+            %input#annuity{type:'radio', name:'credit_type', value:'annuity'}
+            %label{for:'annuity'} Ануїтетний (рівними частинами)
+        %tr
+          %td
+            %label{for:'time'} Термін кредиту (в місяцях):
+          %td
+            %input#time{type:'text', size:5, name:'credit_time'}
+        %tr
+          %td
+          %td
+            %input{type:'submit', value:'Розрахувати'}
