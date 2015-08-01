@@ -1,5 +1,6 @@
 # encoding: utf-8
 require 'sinatra/base'
+require 'tilt/haml'
 require_relative 'calc/standart_credit'
 require_relative 'calc/annuity_credit'
 class Start < Sinatra::Base
@@ -13,6 +14,7 @@ class Start < Sinatra::Base
     case
       when type == 'standart' then @params[:credit_result] = StandartCredit.new(@params).count_payments
       when type == 'annuity' then @params[:credit_result] = AnnuityCredit.new(@params).count_payments
+      else not_found
     end
     haml :result
   end

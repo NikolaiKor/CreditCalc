@@ -7,6 +7,13 @@ class Credit
     @base = 0
   end
 
+  begin
+    def round_up(x)
+      x = x +0.01 if x%1 > 0.005
+      x
+    end
+  end
+
   def check(params)
     [:credit_percent, :credit_sum, :credit_time].each do |key|
       value = (params[key]).to_s
