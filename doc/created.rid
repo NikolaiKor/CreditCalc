@@ -1,0 +1,9 @@
+Sun, 02 Aug 2015 01:35:57 +0300
+./start.rb	Sun, 02 Aug 2015 00:56:41 +0300
+./calc/standart_credit.rb	Sun, 02 Aug 2015 01:26:18 +0300
+./calc/credit.rb	Sun, 02 Aug 2015 01:18:23 +0300
+./calc/annuity_credit.rb	Sun, 02 Aug 2015 01:26:18 +0300
+./tests/tests_views.rb	Sun, 02 Aug 2015 01:03:20 +0300
+./tests/test_logic.rb	Sun, 02 Aug 2015 01:17:43 +0300
+./views/result.haml	Fri, 31 Jul 2015 17:32:36 +0300
+./views/index.haml	Fri, 31 Jul 2015 17:30:04 +0300
