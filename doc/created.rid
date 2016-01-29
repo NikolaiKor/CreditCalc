@@ -1,9 +1,19 @@
-Sun, 02 Aug 2015 01:35:57 +0300
-./start.rb	Sun, 02 Aug 2015 00:56:41 +0300
-./calc/standart_credit.rb	Sun, 02 Aug 2015 01:26:18 +0300
-./calc/credit.rb	Sun, 02 Aug 2015 01:18:23 +0300
+Fri, 29 Jan 2016 20:40:59 +0200
+./public/fonts/glyphicons-halflings-regular.woff	Fri, 29 Jan 2016 12:37:55 +0200
+./public/fonts/glyphicons-halflings-regular.ttf	Fri, 29 Jan 2016 12:37:55 +0200
+./public/fonts/glyphicons-halflings-regular.svg	Fri, 29 Jan 2016 12:37:55 +0200
+./public/fonts/glyphicons-halflings-regular.woff2	Fri, 29 Jan 2016 12:37:55 +0200
+./public/fonts/glyphicons-halflings-regular.eot	Fri, 29 Jan 2016 12:37:55 +0200
+./public/css/bootstrap.min.css	Fri, 29 Jan 2016 12:37:55 +0200
+./public/css/application.css	Fri, 29 Jan 2016 19:05:35 +0200
+./start.rb	Fri, 29 Jan 2016 20:13:54 +0200
+./calc/standard_credit.rb	Mon, 10 Aug 2015 17:43:00 +0300
+./calc/credit.rb	Fri, 29 Jan 2016 16:02:25 +0200
 ./calc/annuity_credit.rb	Sun, 02 Aug 2015 01:26:18 +0300
 ./tests/tests_views.rb	Sun, 02 Aug 2015 01:03:20 +0300
-./tests/test_logic.rb	Sun, 02 Aug 2015 01:17:43 +0300
-./views/result.haml	Fri, 31 Jul 2015 17:32:36 +0300
-./views/index.haml	Fri, 31 Jul 2015 17:30:04 +0300
+./tests/test_logic.rb	Mon, 10 Aug 2015 17:42:43 +0300
+./views/layout.haml	Fri, 29 Jan 2016 19:47:33 +0200
+./views/result.haml	Fri, 29 Jan 2016 19:59:42 +0200
+./views/error.haml	Fri, 29 Jan 2016 19:58:31 +0200
+./views/index.haml	Fri, 29 Jan 2016 19:59:42 +0200
+./config.ru	Sat, 15 Aug 2015 17:54:59 +0300

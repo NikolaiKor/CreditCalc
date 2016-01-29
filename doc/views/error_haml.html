@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>index.haml - RDoc Documentation</title>
+<title>error.haml - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../";
@@ -80,36 +80,20 @@
   </div>
 </nav>
 
-<main role="main" aria-label="Page views/index.haml">
+<main role="main" aria-label="Page views/error.haml">
 
 <p>.col-md-6.col-md-offset-3</p>
 
-<pre>%h1.text-center Кредитний онлайн-калькулятор
-%form{role:&quot;form&quot; ,action:&#39;/result&#39;, method:&#39;post&#39; }
-  %h3.form-calc-heading Кредитні відомості:
-  .form-group
-    %label{for:&#39;procents&#39;} Процентна ставка (%):
-    %input.form-control#percent{type:&#39;text&#39;, size:3, name:&#39;credit_percent&#39;}
-    Увага: Дані вводяться через крапку!
-  .form-group
-    %label{for:&#39;sum&#39;} Сума кредиту:
-    %input.form-control#sum{type:&#39;text&#39;, name:&#39;credit_sum&#39;, size:10}
-  .form-group
-    %label Метод погашення кредиту:
-    .radio
-      %label
-        %input{type:&#39;radio&#39;, name:&#39;credit_type&#39;, value:&#39;standard&#39;, checked:true}
-          Стандартний
-    .radio
-      %label
-        %input{type:&#39;radio&#39;, name:&#39;credit_type&#39;, value:&#39;annuity&#39;}
-        Ануїтетний (рівними частинами)
-  .form-group
-    %label{for:&#39;time&#39;} Термін кредиту (в місяцях):
-    %input.form-control#time{type:&#39;text&#39;, size:5, name:&#39;credit_time&#39;}
-  .form-group
-    %input.btn.btn-success{type:&#39;submit&#39;, value:&#39;Розрахувати&#39;}
-    %input.btn.btn-default{type:&#39;reset&#39;, value:&#39;Очистити&#39;}</pre>
+<pre>%h1 Помилка
+%div
+  %h4 Ви допустили помилку при заповненні форми.
+  %h4 Всі поля повинні бути заповнені числами, що більші за нуль.
+  %h4 В дробових числах ціла та дробова частини розділяються крапкою
+  %br
+  .col-md-6.col-md-offset-3
+    %a.btn.btn-primary.btn-lg{href:&quot;/&quot;}
+      %span.glyphicon.glyphicon-home
+      На головну</pre>
 </main>
 
 

@@ -11,7 +11,7 @@ class TestLogic < Minitest::Test
 
   def setup
     @input = {credit_percent: '10', credit_sum: '20000', credit_time: '24'}
-    @calc_standart = StandartCredit.new(@input).count_payments
+    @calc_standard = StandardCredit.new(@input).count_payments
     @calc_annuity = AnnuityCredit.new(@input).count_payments
     @row_number = 15
     @standard_credit_Value = {res_credit_payment: 833.33, res_credit_percent: 62.50, res_credit: 895.83, res_remainder: 6666.67}
@@ -32,10 +32,10 @@ class TestLogic < Minitest::Test
     assert_in_delta calc[calc.length-2][:res_remainder], 0 #result remainder must be 0
   end
 
-  #test of standart credit
-  def test_standart_credit_results
-    @standard_credit_Value.each { |key, value| assert_in_delta @calc_standart[@row_number][key], value, 0.03 }
-    check_count @calc_standart
+  #test of standard credit
+  def test_standard_credit_results
+    @standard_credit_Value.each { |key, value| assert_in_delta @calc_standard[@row_number][key], value, 0.03 }
+    check_count @calc_standard
   end
 
   #test of annuity credit

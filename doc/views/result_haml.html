@@ -58,7 +58,19 @@
 
   <ul class="link-list">
   
+    <li><a href="../config_ru.html">config.ru</a>
+  
+    <li><a href="../public/css/application_css.html">application.css</a>
+  
+    <li><a href="../public/css/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../public/fonts/glyphicons-halflings-regular_svg.html">glyphicons-halflings-regular.svg</a>
+  
+    <li><a href="../views/error_haml.html">error.haml</a>
+  
     <li><a href="../views/index_haml.html">index.haml</a>
+  
+    <li><a href="../views/layout_haml.html">layout.haml</a>
   
     <li><a href="../views/result_haml.html">result.haml</a>
   
@@ -70,35 +82,36 @@
 
 <main role="main" aria-label="Page views/result.haml">
 
-<p>!!!! %html</p>
+<p>.col-md-8.col-md-offset-2</p>
 
-<pre>%head
-  %title Результати розрахунку
-%body
-  %h2 Результати розрахунку по кредиту
-  .inputInfo
-    Процентна ставка: #{@params[:credit_percent]}%
-    %br
-    Сума кредиту: #{@params[:credit_sum]}
-  %table{border:'3', cellpadding:'0', bordercolor:'black', :style =&gt; &quot;border-collapse: collapse;&quot;}
-    %tr
-      %th номер місяця
-      %th погашення кредиту
-      %th погашення %
-      %th загальний внесок
-      %th залишок кредиту
-      -(@params[:credit_result].length-1).times do|x|
-        %tr
-          %td
-            =x+1
-          -@params[:credit_result][x].each do |key, value|
-            %td
-              =&quot;%0.2f&quot; % value
-      %td
-      -@params[:credit_result].last.each do |key, value|
+<pre>%h1.text-center Результати розрахунку по кредиту
+Процентна ставка:
+%b #{@params[:credit_percent]}%
+%br
+Сума кредиту:
+%b #{@params[:credit_sum]}
+%table.table.table-bordered{style:&quot;border-spacing: 7px 11px&quot;}
+  %tr
+    %th номер місяця
+    %th погашення кредиту
+    %th погашення %
+    %th загальний внесок
+    %th залишок кредиту
+    -(@params[:credit_result].length-1).times do|x|
+      %tr
         %td
-          =&quot;%0.2f&quot; % value
-      %td</pre>
+          =x+1
+        -@params[:credit_result][x].each do |key, value|
+          %td
+            =&quot;%0.2f&quot; % value
+    %td
+    -@params[:credit_result].last.each do |key, value|
+      %td
+        =&quot;%0.2f&quot; % value
+    %td
+%a.btn.btn-primary.btn-lg{href:&quot;/&quot;}
+  %span.glyphicon.glyphicon-home
+  На головну</pre>
 </main>
 
 

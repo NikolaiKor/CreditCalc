@@ -1,7 +1,7 @@
 require_relative 'credit'
 ##
-# This class count standart credit month payments
-class StandartCredit < Credit
+# This class count standard credit month payments
+class StandardCredit < Credit
   ##
   # This method calculate the main debt size
   def base_payment

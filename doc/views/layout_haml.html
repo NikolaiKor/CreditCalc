@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>index.haml - RDoc Documentation</title>
+<title>layout.haml - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../";
@@ -80,36 +80,23 @@
   </div>
 </nav>
 
-<main role="main" aria-label="Page views/index.haml">
+<main role="main" aria-label="Page views/layout.haml">
 
-<p>.col-md-6.col-md-offset-3</p>
+<p>!!!! %html</p>
 
-<pre>%h1.text-center Кредитний онлайн-калькулятор
-%form{role:&quot;form&quot; ,action:&#39;/result&#39;, method:&#39;post&#39; }
-  %h3.form-calc-heading Кредитні відомості:
-  .form-group
-    %label{for:&#39;procents&#39;} Процентна ставка (%):
-    %input.form-control#percent{type:&#39;text&#39;, size:3, name:&#39;credit_percent&#39;}
-    Увага: Дані вводяться через крапку!
-  .form-group
-    %label{for:&#39;sum&#39;} Сума кредиту:
-    %input.form-control#sum{type:&#39;text&#39;, name:&#39;credit_sum&#39;, size:10}
-  .form-group
-    %label Метод погашення кредиту:
-    .radio
-      %label
-        %input{type:&#39;radio&#39;, name:&#39;credit_type&#39;, value:&#39;standard&#39;, checked:true}
-          Стандартний
-    .radio
-      %label
-        %input{type:&#39;radio&#39;, name:&#39;credit_type&#39;, value:&#39;annuity&#39;}
-        Ануїтетний (рівними частинами)
-  .form-group
-    %label{for:&#39;time&#39;} Термін кредиту (в місяцях):
-    %input.form-control#time{type:&#39;text&#39;, size:5, name:&#39;credit_time&#39;}
-  .form-group
-    %input.btn.btn-success{type:&#39;submit&#39;, value:&#39;Розрахувати&#39;}
-    %input.btn.btn-default{type:&#39;reset&#39;, value:&#39;Очистити&#39;}</pre>
+<pre>%head
+  %meta{charset:&quot;UTF-8&quot;}
+  %link{rel:&quot;stylesheet&quot;, type:&quot;text/css&quot;, href:&quot;/css/bootstrap.min.css&quot;}
+  %link{rel:&quot;stylesheet&quot;, type:&quot;text/css&quot;, href:&quot;/css/application.css&quot;}
+  %title Кредитний онлайн-калькулятор
+%body
+  -#.wrapper
+  .container
+    = yield
+  %footer.footer
+    .container
+      %p.text-center.text-muted
+        %a{href:&quot;https://github.com/NikolaiKor/CreditCalc&quot;} GitHub repository</pre>
 </main>
 
 
