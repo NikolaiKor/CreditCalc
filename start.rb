@@ -11,6 +11,10 @@ class Start < Sinatra::Base
     haml :index
   end
 
+  get '/error' do
+    haml :error
+  end
+
   post '/result' do
     type = @params[:credit_type]
     case
@@ -25,6 +29,6 @@ class Start < Sinatra::Base
   end
 
   error do
-    haml :error
+    redirect to('/error')
   end
 end
